@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: raleway;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "navbar" "section" "main" "footer";
+    grid-template-rows: 1fr 1fr 10fr 0.5fr;
+    height: 100vh;
+}   
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    background-color: #03a9f4;
+    color: #e1f5fe;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.titulo {
+    padding-top: 20px;
+
+}
+.section {
+    grid-area: section;
+    background-color: #81d4fa;
+    color: #455a64;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.opcion {
+    margin-bottom: 0;
+}
+
+.main {
+    grid-area: main;
+    background-color: #e3f2fd;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    justify-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border:  solid 1px #CFD8DC;
+    padding-bottom: 5px;
+    
+}
+
+.section_img {
+    width: 150px;
+    height: 150px;
+
+}
+
+.paginas {
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    grid-area: footer;
+    background-color: #01579B;
+    color: #e1f5fe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_icon {
+    padding-top: 10px;
+}
+.footer_text {
+    font-size: small;
+}
+
+@media (min-width: 576px) {
+    .grid-container {
+        
+        display: grid; 
+        height: 100vh; 
+        grid-template-columns: 1fr 5fr;  
+        grid-template-rows: 1fr 10fr 1fr; 
+        grid-template-areas: "navbar section" "navbar main" "footer main";
+    }
+    
+    .main {
+        height: 140vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);       
+
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+
+}
