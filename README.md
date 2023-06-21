@@ -9,8 +9,9 @@ Hola soy Constanza y este es mi proyecto.
 - Bootstrap
 - Flex
 - Grid
-
+- Key frame
 
 ## Resolucion de mi pantalla: 1366 X 768 px
 
-Un punto aparte, es que no pude arreglar el menú hamburguesa. 
+## Se le agregó animación a logo y cards.
+
