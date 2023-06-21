@@ -24,10 +24,42 @@ body {
 }
 
 .logo {
+    color:#e1f5fe;
     display: flex;
     align-items: center;
-    gap: 5px;
+    padding-top: 10px;
+    gap: 10px;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
 
 .titulo {
     padding-top: 20px;
@@ -70,13 +102,49 @@ body {
     background-color: white;
     border:  solid 1px #CFD8DC;
     padding-bottom: 5px;
-    
+}
+
+.card:hover {
+    animation: cardAmin 3s ease 0s 1 normal forwards;
+}
+
+@keyframes cardAmin {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
 }
 
 .section_img {
     width: 150px;
     height: 150px;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
 
+.section_img:hover {
+    filter: grayscale(0%);
 }
 
 .paginas {
@@ -121,5 +189,13 @@ body {
     
     }
 
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .item {
+       padding-top: 50px;
 
+    }
 }
